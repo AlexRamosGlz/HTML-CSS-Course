@@ -3,24 +3,36 @@
   --text: #444444;
   --blue: #1f75fe;
   --defualt-font: sans-serif;
+  --yellow: #ffe70e;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--defualt-font);
   color: var(--text);
   border-top: 5px solid var(--blue);
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .main-header {
   background-color: var(--background);
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+}
+
+nav a:link {
+  display: inline-block;
+  margin: 10px 10px;
 }
 
 article {
@@ -35,8 +47,17 @@ aside {
   background-color: var(--background);
   border-top: 5px solid var(--blue);
   border-bottom: 5px solid var(--blue);
-  padding: 50px 0px;
+  padding: 50px 40px;
   width: 500px;
+}
+
+.like-button {
+  position: absolute;
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  bottom: 50px;
+  right: 50px;
 }
 
 h1,
@@ -52,9 +73,28 @@ h1 {
   font-style: italic;
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2::after {
+  content: "TOP";
+  display: inline-block;
+  background-color: var(--yellow);
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  right: -25px;
+  top: -15px;
+  color: #444;
+}
+
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -73,6 +113,11 @@ p {
   font-size: 22px;
   margin-bottom: 15px;
   line-height: 1.5; /*space between text lines */
+}
+
+/* + is the adjacent sibling selector */
+h3 + p::first-line {
+  /* color: var(--blue); */
 }
 
 ul,
@@ -104,6 +149,7 @@ li:last-child {
 
 #related-posts__list {
   list-style: none;
+  margin: 0;
 }
 
 /*pseudo-class*/
@@ -133,4 +179,45 @@ nav a:link {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+/* FLOATS */
+
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+article {
+  float: left;
+  width: 825px;
+}
+
+aside {
+  float: right;
+  width: 300px;
+}
+
+footer {
+  clear: both;
 }
