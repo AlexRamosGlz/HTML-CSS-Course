@@ -74,6 +74,10 @@
         color: var(--main-color);
       }
 
+      .active .tab-arrow {
+        transform: rotate(0);
+      }
+
       .tab-tittle,
       .number {
         font-size: 24px;
@@ -87,6 +91,8 @@
       .tab-arrow {
         width: 24px;
         stroke: var(--main-color);
+        transform: rotate(-90deg);
+        transition: transform 0.3s ease-in-out;
       }
 
       .hidden-box {

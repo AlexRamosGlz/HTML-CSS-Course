@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /*
+           SPACING SYSTEM (px)
+              2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+          FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+          */
+      :root {
+        --main-color: #087f5b;
+        --grey: #343a40;
+        --light-main-color: #099268;
+        --light-grey: #868e96;
+        --white: #e6fcf5;
+        --light-white: #e6fcf8;
+        --blue: #364fc7;
+        --lightest-grey: #f8f9fa;
+        --strong-blue: #1864ab;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+        color: var(--white);
+        line-height: 1;
+        font-size: 24px;
+      }
+
+      .component-container {
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas:
+          "nav header header header"
+          "nav emails main aside";
+        height: 100vh;
+      }
+
+      .main-header {
+        grid-area: header;
+        background-color: blue;
+        padding: 0 40px;
+      }
+
+      .navigation-buttons--conainer {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+        padding: 18px 0px;
+      }
+
+      .navigation {
+        grid-area: nav;
+        background-color: var(--grey);
+        font-size: 18px;
+        padding: 12px;
+      }
+
+      .email-view--container {
+        background-color: brown;
+        grid-area: main;
+        background-color: white;
+        color: var(--grey);
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 40px;
+      }
+      .additional-info--container {
+        grid-area: aside;
+        background-color: green;
+      }
+
+      .emails--container {
+        grid-area: emails;
+        background-color: e9ecef;
+        overflow: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 40px;
+
+        padding: 40px;
+      }
+
+      .email--item {
+        color: var(adb5bd);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 600;
+        padding: 12px 32px;
+        background-color: #adb5bd;
+        height: 96px;
+        padding: 38px;
+        text-align: center;
+      }
+
+      .additional-info--container {
+        background-color: #e9ecef;
+        color: var(--grey);
+        text-align: center;
+        padding: 40px;
+      }
+
+      /* buttons */
+
+      .btn {
+        font-size: 18px;
+        font-weight: 600;
+        background-color: var(--strong-blue);
+        border: none;
+        padding: 4px 12px;
+        color: var(--white);
+      }
+
+      .trash-button {
+        margin-left: auto;
+        background-color: #d6336c;
+      }
+    </style>
+    <title>Layout</title>
+  </head>
+  <body>
+    <div class="component-container">
+      <header class="main-header">
+        <div class="navigation-buttons--conainer">
+          <button class="btn">New</button>
+          <button class="btn">Reply</button>
+          <button class="btn">Forward</button>
+          <button class="btn">Mark unread</button>
+          <button class="btn trash-button">Trash</button>
+        </div>
+      </header>
+      <nav class="navigation">Nav</nav>
+      <main class="email-view--container">Email view</main>
+      <aside class="additional-info--container">Additional info</aside>
+      <section class="emails--container">
+        <span class="email--item"> Email 1</span>
+        <span class="email--item"> Email 2</span>
+        <span class="email--item"> Email 3</span>
+        <span class="email--item"> Email 4</span>
+        <span class="email--item"> Email 5</span>
+        <span class="email--item"> Email 6</span>
+        <span class="email--item"> Email 7</span>
+        <span class="email--item"> Email 8</span>
+        <span class="email--item"> Email 9</span>
+        <span class="email--item"> Email 10</span>
+      </section>
+    </div>
+  </body>
+</html>
