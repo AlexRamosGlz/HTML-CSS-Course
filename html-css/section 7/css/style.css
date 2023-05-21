@@ -222,6 +222,16 @@
 .meal {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem;
 }
 
 .meal-tittle {
@@ -240,9 +250,206 @@
 
 .meal-attribute {
   font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
 }
 
 .meal-img {
   width: 100%;
-  border-radius: 11px 11px 0 0;
+}
+
+.meal-icon {
+  color: var(--primary);
+  font-size: 2.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: var(--vegetarian-tag);
+}
+.tag--vegan {
+  background-color: var(--vegan-tag);
+}
+
+.tag--paleo {
+  background-color: var(--paleo-tag);
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.all-recipies {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary);
+  border-bottom: solid 1px currentColor;
+  padding-bottom: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.link:hover,
+.link:active {
+  color: var(--primary-shade);
+  border: none;
+  border-bottom: solid 1px transparent;
+}
+
+/*************************/
+/*  TESTIMONIALS SECTION */
+/*************************/
+
+.section-testimonials {
+  background-color: var(--primary-tint);
+
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  line-height: 1.8;
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  /* it prevents the child img from overflowing it parents container */
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/*************************/
+/*  PRICING SECTION */
+/*************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+  padding: 4.8rem;
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+
+  box-shadow: inset 0 0 0 3px var(--primary-tint);
+}
+
+.pricing-plan--complete {
+  background-color: var(--primary-tint);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best Value";
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 3.2rem;
+  color: #333;
+
+  top: 5%;
+  right: -7%;
+  background-color: var(--vegan-tag);
+
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: var(--primary-shade);
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #888;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
 }
