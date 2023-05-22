@@ -115,6 +115,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -124,6 +125,10 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 8px;
+
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
 
   transition: background-color 0.3s ease-in;
 }
@@ -196,6 +201,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .center-text {
   text-align: center;
 }
@@ -222,4 +231,24 @@ strong {
 .list-icon {
   color: var(--primary);
   font-size: 3rem;
+}
+
+.btn--form {
+  background-color: #45260a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: white;
+  color: #555;
+}
+
+*:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
