@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        font-size: 1.8rem;
+        font-family: "Rubik", "Inter", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50vh;
+        background-color: rgb(32, 33, 36);
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 120rem;
+        position: relative;
+      }
+
+      .modal-container {
+        display: inline-block;
+        padding: 1.2rem 2.6rem;
+        border-radius: 9px;
+        box-shadow: 0.8rem 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
+        background-color: #0d1625;
+        color: rgb(239, 239, 239);
+      }
+
+      .input {
+        size: 1;
+        border: none;
+        background-color: #eee;
+        text-align: center;
+        border-radius: 11px;
+      }
+
+      .input--single-char {
+        padding: 1.2rem;
+      }
+
+      *:focus {
+        outline: none;
+        background-color: #aaa;
+      }
+
+      .margin-bottom-m {
+        margin-bottom: 3.2rem;
+      }
+
+      .margin-bottom-s {
+        margin-bottom: 1.8rem;
+      }
+
+      .heading-secondary {
+        font-size: 3.2rem;
+      }
+    </style>
+    <title>Very Code Modal</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="modal-container">
+        <h2 class="heading-secondary margin-bottom-m">Ingresar Codigo</h2>
+        <p class="margin-bottom-s">
+          Ingresa el codigo para recuperar tu contraseña
+        </p>
+        <form class="form--verifiy-code">
+          <input
+            class="input input--single-char"
+            placeholder="0"
+            size="1"
+            maxlength="1"
+          />
+          <input
+            class="input input--single-char"
+            placeholder="0"
+            size="1"
+            maxlength="1"
+          />
+          <input
+            class="input input--single-char"
+            placeholder="0"
+            size="1"
+            maxlength="1"
+          />
+          <input
+            class="input input--single-char"
+            placeholder="0"
+            size="1"
+            maxlength="1"
+          />
+          <input
+            class="input input--single-char"
+            placeholder="0"
+            size="1"
+            maxlength="1"
+          />
+          <input
+            class="input input--single-char"
+            placeholder="0"
+            size="1"
+            maxlength="1"
+          />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
