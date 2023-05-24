@@ -18,26 +18,26 @@
       body {
         font-size: 1.8rem;
         font-family: "Rubik", "Inter", sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 50vh;
-        background-color: rgb(32, 33, 36);
-      }
-
-      .container {
-        margin: 0 auto;
-        max-width: 120rem;
-        position: relative;
       }
 
       .modal-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
         display: inline-block;
         padding: 1.2rem 2.6rem;
         border-radius: 9px;
         box-shadow: 0.8rem 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
         background-color: #0d1625;
         color: rgb(239, 239, 239);
+        position: absolute;
       }
 
       .input {
@@ -48,13 +48,19 @@
         border-radius: 11px;
       }
 
+      .form--verifiy-code {
+        display: flex;
+        align-items: stretch;
+        gap: 0.8rem;
+      }
+
       .input--single-char {
         padding: 1.2rem;
       }
 
       *:focus {
         outline: none;
-        background-color: #aaa;
+        background-color: #ddd;
       }
 
       .margin-bottom-m {
@@ -68,54 +74,78 @@
       .heading-secondary {
         font-size: 3.2rem;
       }
+
+      .btn {
+        background-color: transparent;
+        border: none;
+        font-family: "Rubik", "Inter", sans-serif;
+        font-size: 1.8rem;
+        padding: 1.2rem 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn.btn--form {
+        padding: 0.8rem 1.2rem;
+        background-color: #0070f0;
+        border-radius: 11px;
+        color: white;
+      }
+
+      .btn--form:hover {
+        background-color: #0045ad;
+      }
     </style>
     <title>Very Code Modal</title>
   </head>
   <body>
     <main class="container">
       <section class="modal-container">
-        <h2 class="heading-secondary margin-bottom-m">Ingresar Codigo</h2>
-        <p class="margin-bottom-s">
-          Ingresa el codigo para recuperar tu contraseña
-        </p>
-        <form class="form--verifiy-code">
-          <input
-            class="input input--single-char"
-            placeholder="0"
-            size="1"
-            maxlength="1"
-          />
-          <input
-            class="input input--single-char"
-            placeholder="0"
-            size="1"
-            maxlength="1"
-          />
-          <input
-            class="input input--single-char"
-            placeholder="0"
-            size="1"
-            maxlength="1"
-          />
-          <input
-            class="input input--single-char"
-            placeholder="0"
-            size="1"
-            maxlength="1"
-          />
-          <input
-            class="input input--single-char"
-            placeholder="0"
-            size="1"
-            maxlength="1"
-          />
-          <input
-            class="input input--single-char"
-            placeholder="0"
-            size="1"
-            maxlength="1"
-          />
-        </form>
+        <div class="modal-content">
+          <h2 class="heading-secondary margin-bottom-m">Ingresar Codigo</h2>
+          <p class="margin-bottom-s">
+            Ingresa el codigo para recuperar tu contraseña
+          </p>
+          <form class="form--verifiy-code">
+            <input
+              class="input input--single-char"
+              placeholder="0"
+              size="1"
+              maxlength="1"
+            />
+            <input
+              class="input input--single-char"
+              placeholder="0"
+              size="1"
+              maxlength="1"
+            />
+            <input
+              class="input input--single-char"
+              placeholder="0"
+              size="1"
+              maxlength="1"
+            />
+            <input
+              class="input input--single-char"
+              placeholder="0"
+              size="1"
+              maxlength="1"
+            />
+            <input
+              class="input input--single-char"
+              placeholder="0"
+              size="1"
+              maxlength="1"
+            />
+            <input
+              class="input input--single-char"
+              placeholder="0"
+              size="1"
+              maxlength="1"
+            />
+            <button class="btn btn--form">&rarr;</button>
+          </form>
+        </div>
       </section>
     </main>
   </body>
