@@ -145,20 +145,16 @@
       const cards = document.querySelectorAll(".img-item");
 
       cards.forEach((card, index) => {
-        addEventListener("click", (e) => {
-          removeSelectedClass(card);
-
-          card.classList.add("card-selected");
-          return;
+        card.addEventListener("click", (e) => {
+          expandCard(card)
         });
       });
 
-      const removeSelectedClass = (card) => {
-        debugger;
-        cards.forEach((card) => {
-          card.classList.remove("card-selected");
-        });
-      };
+      
+      const expandCard = (card) => {
+        debugger
+        card.classList.add('card-selected')
+      }
     </script>
   </body>
 </html>
