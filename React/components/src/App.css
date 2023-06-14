@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", "Inter", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  font-size: 6.5rem;
+  max-width: 120rem;
+  height: 120rem;
+  margin: .8rem;
+}
+
+.container {
+  display: flex;
+}
+
+
+/*:::::::::::::::::::::::::::::::
+  SIDE BAR
+  :::::::::::::::::::::::::::::::
+*/
+
+.side-bar {
+  background-color: #495057;
+  height: 100vh;
+  max-width: 24rem;
+  display: flex;
+  flex-direction: column;
+  transition: max-width .3s ease;
+  position: relative;
+  padding: 1.2rem;
+
+}
+
+
+.nav-open .side-bar {
+  max-width: 24rem;
+  transition: max-width .3s ease;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+}
+
+.btn--close {
+  padding: 1.2rem;
+  position: absolute;
+  right: 0;
+  transform: translate(50%, 0);
+}
+
+.side-bar .nav-icon.close-icon {
+  stroke: white;
+  background-color: #4c6ef5;
+  border-radius: 50%;
+  padding: .3rem;
+}
+
+.nav-open .nav-icon.close-icon {
+  transform: rotate(180deg);
+}
+
+.side-bar .nav-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: white;
+  transition: all .3s;
+  stroke: 1.5px;
+}
+
+.avatar {
+  align-self: center;
+  padding: 1.8rem;
+  margin-bottom: 8.2rem;
+}
+
+.nav-open .avatar {
+  align-self: baseline;
+}
+
+.nav-footer {
+  align-self: center;
+  gap: 1.2rem;
+  display: flex;
+  margin-top: auto;
+}
+
+.nav-open .nav-footer {
+  align-self: baseline;
+}
+
+.tab-box {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.8rem;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  border-radius: 11px;
+}
+
+.tab-box:hover {
+  background-color: #343a40;
+}
+
+.tab-box:nth-child(3) {
+  background-color: #343a40;
+  
+}
+
+a:link, a:visited{
+  font-size: 1.8rem;
+  color:white;
+  text-decoration: none;
+}
+
+ 
+.tab-tittle{
+  display: none;
+}
+
+.nav-open .tab-tittle {
+  display: block;
+}
+
+.search-bar {
+  display: none;
+}
+
+.nav-open .search-bar {
+  display: block;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.nav-open .search-bar input:focus {
+ outline: none;
+}
+
+
