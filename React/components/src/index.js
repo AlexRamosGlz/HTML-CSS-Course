@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SideBar from './pages/sideBar/sideBar.components';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='container'>
-      <SideBar />
-      <div className='content'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, mollitia eum molestias minima quam aliquid perspiciatis earum quibusdam aspernatur nisi atque nostrum ducimus dolorem esse inventore necessitatibus cupiditate, consectetur sapiente.</div>
-    </div>
+    <Provider store={store}>
+      <App /></Provider>
   </React.StrictMode>
 );
 
