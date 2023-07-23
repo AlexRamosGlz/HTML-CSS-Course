@@ -1,32 +1,70 @@
-import React from 'react';
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, BrowserRouter, Routes } from 'react-router-dom';
-import SideBar from './pages/sideBar/sideBar.components';
-import './App.css';
-import { createRoot } from 'react-dom/client';
-import { openNav } from './util/navigationSlice';
-import { Provider, useDispatch, useSelector } from 'react-redux';
-import { store } from "./store/store"
+import React from "react";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  BrowserRouter,
+  Routes,
+} from "react-router-dom";
+import SideBar from "./pages/sideBar/sideBar.components";
+import { createRoot } from "react-dom/client";
+import { openNav } from "./util/navigationSlice";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { store } from "./store/store";
+import { Content } from "./pages/content/Content.component";
+import { Modal } from "./components/Modal/Modal.component";
+import { DateCounter } from "./components/ReactCourseChallenges/DateCounter/DateCounter.component";
+import FlashCardsComponent from "./components/ReactCourseChallenges/FlashCards/FlashCards.component";
+import FlashCards from "./components/ReactCourseChallenges/FlashCards/FlashCards.component";
+import { Accordion } from "./components/ReactCourseChallenges/Accordion/Accordion.component";
 
 const App = () => {
-
   const dispatch = useDispatch();
-  const { openNavigation } = useSelector(state => state.navigation)
+  const { openNavigation } = useSelector((state) => state.navigation);
+  const { open } = useSelector((state) => state.modal);
 
   const handleOpen = () => {
-
     dispatch(openNav());
-  }
+  };
+
+  const faqs = [
+    {
+      title: "Where are these chairs assembled?",
+      text:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quaerat temporibus quas dolore provident nisi ut aliquid ratione beatae sequi aspernatur veniam repellendus."
+    },
+    {
+      title: "How long do I have to return my chair?",
+      text:
+        "Pariatur recusandae dignissimos fuga voluptas unde optio nesciunt commodi beatae, explicabo natus."
+    },
+    {
+      title: "Do you ship to countries outside the EU?",
+      text:
+        "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!"
+    }
+  ];
 
   return (
-
-    <div className='container'>
-      <SideBar openNav={openNavigation} onClick={handleOpen} />
-      <div className='content'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ea debitis eaque id quae omnis, a, corrupti dolorem inventore aliquid laborum, officia architecto! Harum, pariatur omnis beatae alias corrupti numquam.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, mollitia eum molestias minima quam aliquid perspiciatis earum quibusdam aspernatur nisi atque nostrum ducimus dolorem esse inventore necessitatibus cupiditate, consectetur sapiente.</p>
-      </div>
+    <div className="container">
+      {/* <SideBar openNav={openNavigation} onClick={handleOpen} />
+      <Content navOpen={openNavigation} />
+      <Modal
+        open={open}
+        ModalContent={
+          <>
+            <img src="img/expandable cards.gif" className="component-gif"></img>
+            <span>
+              asdasssssssssssssssssssssssssssssssssssssssssssssssssssdaadwwwwwwwwwwwdwasasssssssssssssssssssdwaawwwwwws
+            </span>
+          </>
+        }
+      /> */}
+      {/* <FlashCards /> */}
+      {<Accordion />}
     </div>
-
-  )
-}
+  );
+};
 
 export default App;

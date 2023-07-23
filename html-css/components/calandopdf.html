@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola mundo</h1>
+    <script>
+
+        async function getPdf() {
+
+            debugger
+            const data = fetch("http://localhost:3000/users/contract", {
+                method: "post"
+            }).then(response => response.text()).then(data => console.log(data))
+        }
+
+        getPdf()
+    </script>
+</body>
+
+</html>

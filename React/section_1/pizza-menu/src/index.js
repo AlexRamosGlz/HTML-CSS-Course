@@ -133,15 +133,13 @@ function Order({ closeHour }) {
 }
 
 function Pizza({ name, price, ingredient, photoName, soldOut }) {
-  if (soldOut) return null;
-
   return (
-    <li className="pizza">
+    <li className={`pizza ${soldOut ? "sold-out" : " "}`}>
       <img src={photoName} alt={name}></img>
       <div>
         <h3>{name}</h3>
         <p>{ingredient}</p>
-        <span>{price + 3}</span>
+        <span>{soldOut ? "SOLD OUT" : price}</span>
       </div>
     </li>
   );

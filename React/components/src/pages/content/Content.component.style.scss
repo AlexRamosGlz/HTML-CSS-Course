@@ -1,0 +1,35 @@
+$title: #212529;
+
+.content {
+
+  padding: 2.4rem;
+
+
+  .content-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    gap: 3.2rem;
+
+    .component--item {
+
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 1.2rem;
+      border-radius: 5px;
+
+      a {
+        cursor: pointer;
+      }
+
+      .component--title {
+        font-size: 3.2rem;
+        text-align: center;
+        color: $title;
+      }
+
+      .component-gif {
+        max-width: 52rem;
+      }
+    }
+  }
+}
