@@ -1,0 +1,32 @@
+$title: #212529;
+
+.component-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1.2rem;
+  border-radius: 5px;
+  position: relative;
+
+  .children {
+    max-width: 100%;
+    a {
+      cursor: pointer;
+    }
+
+    .component--title {
+      font-size: 3.2rem;
+      text-align: center;
+      color: $title;
+    }
+
+    .component-gif {
+      width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 26.56em) {
+  .component-card {
+    position: unset;
+  }
+}

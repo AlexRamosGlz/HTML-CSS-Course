@@ -1,35 +1,49 @@
-$title: #212529;
+
 
 .content {
-
   padding: 2.4rem;
-
+  min-width: 94%;
 
   .content-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     list-style: none;
     gap: 3.2rem;
+  }
+}
 
-    .component--item {
+.nav-open.content {
+  min-width: 85%;
+  margin-left: 25.5rem;
+}
 
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      padding: 1.2rem;
-      border-radius: 5px;
 
-      a {
-        cursor: pointer;
-      }
+@media (max-width: 59.5em) {
+  .nav-open.content {
+    min-width: 65%;
+  }
+  .content {
+    min-width: 70%;
+    .content-list {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
 
-      .component--title {
-        font-size: 3.2rem;
-        text-align: center;
-        color: $title;
-      }
+@media (max-width: 59.5em) {
+  .nav-open.content {
+    min-width: 50%;
 
-      .component-gif {
-        max-width: 52rem;
-      }
+    .content-list {
+      grid-template-columns: auto;
+    }
+  }
+}
+
+@media (max-width: 26.5em) {
+  .content {
+    .content-list {
+      grid-template-columns: auto;
     }
   }
 }

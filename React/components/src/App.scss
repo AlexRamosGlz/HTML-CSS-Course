@@ -16,6 +16,18 @@ body {
   font-family: "Rubik", "Inter", sans-serif;
 }
 
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: .9rem;
+  padding: 5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #343a40c0;
+  border-radius: 10px;
+}
+
 .App {
   text-align: center;
 }

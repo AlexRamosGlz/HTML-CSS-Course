@@ -13,8 +13,8 @@ const SideBar = ({ openNav, onClick }) => {
     }
 
     return (
-        <div className={`${openNav ? "nav-open" : null}`}>
-            <nav className={` side-bar `}>
+        <nav className={`${openNav ? "nav-open side-bar" : "side-bar"}`}>
+            
 
                 <button onClick={onClick} className="btn btn--close">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="icon nav-icon close-icon">
@@ -70,10 +70,10 @@ const SideBar = ({ openNav, onClick }) => {
                     </svg>
                     <a className="tab-tittle" href="#"> Logout</a>
                 </div>
-            </nav>
+            
 
             <MobileNavigation openMenu={mobileNavigation} />
-        </div>
+        </nav>
     )
 }
 

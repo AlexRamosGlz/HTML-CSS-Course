@@ -18,6 +18,8 @@ import { DateCounter } from "./components/ReactCourseChallenges/DateCounter/Date
 import FlashCardsComponent from "./components/ReactCourseChallenges/FlashCards/FlashCards.component";
 import FlashCards from "./components/ReactCourseChallenges/FlashCards/FlashCards.component";
 import { Accordion } from "./components/ReactCourseChallenges/Accordion/Accordion.component";
+import RaitingBar from "./components/RatingBar/RatingBar.component";
+import { StepsBar } from "./components/ProgressBar/StepsBar.component";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -31,38 +33,28 @@ const App = () => {
   const faqs = [
     {
       title: "Where are these chairs assembled?",
-      text:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quaerat temporibus quas dolore provident nisi ut aliquid ratione beatae sequi aspernatur veniam repellendus."
+      text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quaerat temporibus quas dolore provident nisi ut aliquid ratione beatae sequi aspernatur veniam repellendus.",
     },
     {
       title: "How long do I have to return my chair?",
-      text:
-        "Pariatur recusandae dignissimos fuga voluptas unde optio nesciunt commodi beatae, explicabo natus."
+      text: "Pariatur recusandae dignissimos fuga voluptas unde optio nesciunt commodi beatae, explicabo natus.",
     },
     {
       title: "Do you ship to countries outside the EU?",
-      text:
-        "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!"
-    }
+      text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
+    },
   ];
 
   return (
     <div className="container">
-      {/* <SideBar openNav={openNavigation} onClick={handleOpen} />
-      <Content navOpen={openNavigation} />
-      <Modal
-        open={open}
-        ModalContent={
-          <>
-            <img src="img/expandable cards.gif" className="component-gif"></img>
-            <span>
-              asdasssssssssssssssssssssssssssssssssssssssssssssssssssdaadwwwwwwwwwwwdwasasssssssssssssssssssdwaawwwwwws
-            </span>
-          </>
-        }
-      /> */}
-      {/* <FlashCards /> */}
-      {<Accordion />}
+      <SideBar openNav={openNavigation} onClick={handleOpen} />
+      <Content openNav={openNavigation} />
+      <Modal open={open} tittle="Exapand Cards">
+        <img src="img/expandable cards.gif" className="component-gif"></img>
+        <p>Some Description</p>
+        <RaitingBar maxRating={5} />
+        <StepsBar steps={[1, 2, 3, 4, 5, 6, 8, 11]} />
+      </Modal>
     </div>
   );
 };

@@ -5,7 +5,7 @@
 
 .side-bar {
     background-color: #495057;
-    height: 100vh;
+    height: 100%;
     max-width: 10rem;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
 }
 
 
-.nav-open .side-bar {
+.nav-open.side-bar {
     max-width: 24rem;
 }
 

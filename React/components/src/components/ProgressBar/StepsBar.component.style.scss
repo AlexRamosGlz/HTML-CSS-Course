@@ -1,0 +1,34 @@
+@import "./Step/Step.component.style.scss";
+
+.steps-bar {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    .steps-progress {
+        background-color: #4c6ef5;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 11%;
+        z-index: -1;
+        transition: 0.4s ease;
+    }
+}
+
+.steps-bar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 98%;
+    z-index: -1;
+    background-color: #999;
+}
